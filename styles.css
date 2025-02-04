@@ -1,0 +1,176 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #006400, #ffffff);
+    color: #333;
+    animation: fadeIn 1s forwards;
+    padding-top: 70px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #006400, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    z-index: 1000;
+}
+/* Logo Navbar */
+.navbar .logo img {
+    width: 40px;  /* Ukuran tetap */
+    height: 40px;
+    border-radius: 50%;  /* Membuat logo menjadi bulat */
+    transition: width 0.3s, height 0.3s;
+}
+
+/* Mengecilkan logo saat scroll */
+.navbar.shrink .logo img {
+    width: 40px;  /* Ukuran tetap meskipun di-scroll */
+    height: 40px;
+}
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #006400, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Tetap menjaga teks di kiri */
+    padding: 15px 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Logo tetap di kiri */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Menu Navbar tetap di kiri */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin-left: 20px; /* Pastikan tetap di kiri */
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Warna berubah saat hover atau klik */
+.navbar ul li a:hover,
+.navbar ul li a:active {
+    color: yellow;
+}
+
+/* Navbar saat discroll */
+.navbar.shrink {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #004d00, #ffffff);
+}
+
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+#hero {
+    background: url('gambar/1 (6).jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#hero .hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#tentang, #visi-misi, #galeri, #kontak-lokasi {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+footer {
+    background: #006400;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #006400;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
